@@ -294,6 +294,32 @@
                                  </div>
                              </div>
 
+                             {{-- Other Charges Section --}}
+                             <div class="md:col-span-2 mt-4 border-t pt-4 border-gray-200 dark:border-gray-700">
+                                 <h3 class="text-lg font-medium leading-6 text-gray-900 dark:text-gray-100">Other charges</h3>
+                             </div>
+
+                             <div class="md:col-span-2">
+                                 <label for="other_charge_enabled" class="inline-flex items-center">
+                                     <input id="other_charge_enabled" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="other_charge_enabled" value="1" {{ old('other_charge_enabled', $accommodation->other_charge_enabled) ? 'checked' : '' }}>
+                                     <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Enable other one-time charge') }}</span>
+                                 </label>
+                                 <x-input-error :messages="$errors->get('other_charge_enabled')" class="mt-2" />
+                             </div>
+
+                             <div>
+                                 <x-input-label for="other_charge_name" :value="__('Charge name shown to users')" />
+                                 <x-text-input id="other_charge_name" class="block mt-1 w-full" type="text" name="other_charge_name" :value="old('other_charge_name', $accommodation->other_charge_name ?: 'Non-refundable lease fee (per booking)')" />
+                                 <x-input-error :messages="$errors->get('other_charge_name')" class="mt-2" />
+                             </div>
+
+                             <div>
+                                 <x-input-label for="other_charge_amount" :value="__('Fixed amount')" />
+                                 <x-text-input id="other_charge_amount" class="block mt-1 w-full" type="number" step="0.01" min="0" name="other_charge_amount" :value="old('other_charge_amount', $accommodation->other_charge_amount)" />
+                                 <p class="text-sm text-gray-500 mt-1">Applied once per booking when enabled, not per week.</p>
+                                 <x-input-error :messages="$errors->get('other_charge_amount')" class="mt-2" />
+                             </div>
+
                         </div> {{-- End Grid --}}
 
                         {{-- Active Checkbox --}}

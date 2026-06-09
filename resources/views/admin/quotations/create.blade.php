@@ -283,6 +283,9 @@
                                                      data-private-bathroom-fee-2026="{{ $accom->private_bathroom_fee_2026 ?? 0 }}"
                                                      data-dietary-supplement-enabled-2026="{{ $accom->dietary_supplement_enabled_2026 ? '1' : '0' }}"
                                                      data-dietary-supplement-fee-2026="{{ $accom->dietary_supplement_fee_2026 ?? 0 }}"
+                                                     data-other-charge-enabled="{{ $accom->other_charge_enabled ? '1' : '0' }}"
+                                                     data-other-charge-name="{{ $accom->other_charge_name ?? 'Non-refundable lease fee (per booking)' }}"
+                                                     data-other-charge-amount="{{ $accom->other_charge_amount ?? 0 }}"
                                                      {{ old('accommodation_id') == $accom->id ? 'selected' : '' }}>{{ $accom->name }}</option>
                                           @endforeach
                                      </select>
@@ -403,6 +406,9 @@
                                                      data-private-bathroom-fee-2026="{{ $accom->private_bathroom_fee_2026 ?? 0 }}"
                                                      data-dietary-supplement-enabled-2026="{{ $accom->dietary_supplement_enabled_2026 ? '1' : '0' }}"
                                                      data-dietary-supplement-fee-2026="{{ $accom->dietary_supplement_fee_2026 ?? 0 }}"
+                                                     data-other-charge-enabled="{{ $accom->other_charge_enabled ? '1' : '0' }}"
+                                                     data-other-charge-name="{{ $accom->other_charge_name ?? 'Non-refundable lease fee (per booking)' }}"
+                                                     data-other-charge-amount="{{ $accom->other_charge_amount ?? 0 }}"
                                                      {{ old('second_accommodation_id') == $accom->id ? 'selected' : '' }}>{{ $accom->name }}</option>
                                          @endforeach
                                      </select>
