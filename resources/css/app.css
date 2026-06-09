@@ -1,0 +1,61 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bayswater custom styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-bayswater-gray bg-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-semibold text-bayswater-blue;
+  }
+  a {
+    @apply text-bayswater-blue-light hover:text-bayswater-orange transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .agent-logo-container {
+    @apply m-0 p-0;
+  }
+}
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-2 rounded-md font-semibold text-sm transition-colors duration-300;
+  }
+  .btn-primary {
+    @apply btn bg-bayswater-orange text-white hover:bg-bayswater-orange-dark;
+  }
+
+  /* Enhanced form styles for better contrast */
+  input, select, textarea {
+    @apply bg-white text-gray-800 border-gray-300;
+  }
+
+  /* Dark background inputs */
+  .bg-gray-800 input, .bg-gray-900 input, .bg-blue-900 input,
+  .bg-gray-800 select, .bg-gray-900 select, .bg-blue-900 select,
+  .bg-gray-800 textarea, .bg-gray-900 textarea, .bg-blue-900 textarea {
+    @apply bg-white text-gray-800 border-gray-400;
+  }
+  .btn-secondary {
+    @apply btn bg-bayswater-blue-light text-white hover:bg-bayswater-blue;
+  }
+  .btn-outline {
+    @apply btn border-2 border-bayswater-blue text-bayswater-blue hover:bg-bayswater-blue hover:text-white;
+  }
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+  .card-header {
+    @apply p-4 bg-bayswater-blue text-white font-semibold;
+  }
+  .card-body {
+    @apply p-4;
+  }

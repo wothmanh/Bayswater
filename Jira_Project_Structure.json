@@ -1,0 +1,79 @@
+{
+  "epics": [
+    {
+      "name": "Critical Fixes",
+      "description": "Critical fixes and security improvements that need immediate attention",
+      "priority": "Highest",
+      "color": "#FF5630"
+    },
+    {
+      "name": "Code Quality",
+      "description": "Code refactoring and quality improvements to make the codebase more maintainable",
+      "priority": "High",
+      "color": "#FF8B00"
+    },
+    {
+      "name": "Testing",
+      "description": "Comprehensive testing implementation to ensure code reliability",
+      "priority": "High",
+      "color": "#36B37E"
+    },
+    {
+      "name": "New Features",
+      "description": "New functionality and feature enhancements",
+      "priority": "Medium",
+      "color": "#0052CC"
+    },
+    {
+      "name": "UI/UX",
+      "description": "User interface and user experience improvements",
+      "priority": "Medium",
+      "color": "#6554C0"
+    },
+    {
+      "name": "Performance",
+      "description": "Performance optimizations and monitoring improvements",
+      "priority": "High",
+      "color": "#FF991F"
+    },
+    {
+      "name": "Documentation",
+      "description": "Documentation and maintenance tasks",
+      "priority": "Low",
+      "color": "#97A0AF"
+    }
+  ],
+  "phases": [
+    {
+      "name": "Phase 1: Foundation",
+      "duration": "2 weeks",
+      "description": "Critical fixes and initial refactoring",
+      "tasks": ["Critical Fixes", "Start Code Quality"]
+    },
+    {
+      "name": "Phase 2: Quality & Testing",
+      "duration": "2 weeks", 
+      "description": "Complete refactoring and implement testing",
+      "tasks": ["Complete Code Quality", "Testing"]
+    },
+    {
+      "name": "Phase 3: Feature Enhancement",
+      "duration": "3 weeks",
+      "description": "Add new features and improve UI/UX",
+      "tasks": ["New Features", "UI/UX", "Performance"]
+    },
+    {
+      "name": "Phase 4: Polish & Documentation",
+      "duration": "1 week",
+      "description": "Final documentation and deployment preparation",
+      "tasks": ["Documentation", "Final testing"]
+    }
+  ],
+  "project_info": {
+    "name": "Bayswater Laravel Enhancement",
+    "description": "Comprehensive improvement project for the Bayswater Language School Fee Calculator System",
+    "total_story_points": 200,
+    "estimated_duration": "8 weeks",
+    "team_size": "2-3 developers"
+  }
+}

@@ -1,0 +1,45 @@
+/* Year-based section styling for consistent appearance across all years */
+
+/* Base styling for year sections - applies to all years */
+.year-section {
+    @apply bg-gray-50 dark:bg-gray-700 p-4 rounded-lg;
+}
+
+/* Ensure all year sections (2025, 2026, 2027, etc.) use consistent styling */
+.year-section-2025,
+.year-section-2026,
+.year-section-2027,
+.year-section-2028,
+.year-section-2029,
+.year-section-2030 {
+    @apply bg-gray-50 dark:bg-gray-700 p-4 rounded-lg;
+}
+
+/* Year section headers */
+.year-section h4 {
+    @apply text-md font-semibold text-gray-900 dark:text-gray-100 mb-3;
+}
+
+/* Input fields within year sections */
+.year-section .form-input {
+    @apply block mt-1 w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm;
+}
+
+/* Checkbox styling within year sections */
+.year-section input[type="checkbox"] {
+    @apply rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800;
+}
+
+/* Label styling within year sections */
+.year-section label {
+    @apply text-sm text-gray-600 dark:text-gray-400;
+}
+
+/* Spacing for form elements within year sections */
+.year-section .form-group {
+    @apply mb-4;
+}
+
+.year-section .form-group:last-child {
+    @apply mb-0;
+}
