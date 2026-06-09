@@ -98,6 +98,9 @@ class QuotationController extends Controller
             'private_bathroom_fee_2026',
             'dietary_supplement_enabled_2026',
             'dietary_supplement_fee_2026',
+            'other_charge_enabled',
+            'other_charge_name',
+            'other_charge_amount',
             'summer_fee_per_week',
             'summer_start_date',
             'summer_end_date',
@@ -726,7 +729,14 @@ class QuotationController extends Controller
         $schools = School::where('active', true)->orderBy('order')->orderBy('name')->get(['id', 'name', 'city_id']);
         $courseTypes = CourseType::where('active', true)->orderBy('order')->orderBy('name')->get(['id', 'name']);
         $courses = Course::where('active', true)->orderBy('order')->orderBy('name')->get(['id', 'name', 'school_id', 'course_type_id', 'pricing_type', 'category']);
-        $accommodations = Accommodation::where('active', true)->orderBy('order')->orderBy('name')->get(['id', 'name', 'school_id']);
+        $accommodations = Accommodation::where('active', true)->orderBy('order')->orderBy('name')->get([
+            'id',
+            'name',
+            'school_id',
+            'other_charge_enabled',
+            'other_charge_name',
+            'other_charge_amount',
+        ]);
          $addons = Addon::where('active', true)->whereNull('school_id')->orderBy('name')->get();
          $regions = Region::where('active', true)->orderBy('order')->orderBy('name')->pluck('name', 'id'); // Fetch Regions again with custom order
          // Fetch and group course prices by course_id again

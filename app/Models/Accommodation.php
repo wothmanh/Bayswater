@@ -50,6 +50,9 @@ class Accommodation extends Model
         'dietary_supplement_enabled',
         'private_bathroom_enabled_2026',
         'dietary_supplement_enabled_2026',
+        'other_charge_enabled',
+        'other_charge_name',
+        'other_charge_amount',
     ];
 
     /**
@@ -69,6 +72,8 @@ class Accommodation extends Model
         'dietary_supplement_enabled' => 'boolean',
         'private_bathroom_enabled_2026' => 'boolean',
         'dietary_supplement_enabled_2026' => 'boolean',
+        'other_charge_enabled' => 'boolean',
+        'other_charge_amount' => 'decimal:2',
     ];
 
     /**

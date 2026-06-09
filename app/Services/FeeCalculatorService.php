@@ -2620,6 +2620,11 @@ class FeeCalculatorService
                 }
             }
         }
+
+        if ($this->accommodation->other_charge_enabled && (float) $this->accommodation->other_charge_amount > 0) {
+            $chargeName = $this->accommodation->other_charge_name ?: 'Non-refundable lease fee (per booking)';
+            $this->addItem($chargeName, (float) $this->accommodation->other_charge_amount, 'fees');
+        }
     }
 
     /**
@@ -2968,6 +2973,11 @@ class FeeCalculatorService
                     }
                 }
             }
+        }
+
+        if ($this->secondAccommodation->other_charge_enabled && (float) $this->secondAccommodation->other_charge_amount > 0) {
+            $chargeName = $this->secondAccommodation->other_charge_name ?: 'Non-refundable lease fee (per booking)';
+            $this->addItem('Second Accommodation - ' . $chargeName, (float) $this->secondAccommodation->other_charge_amount, 'fees');
         }
 
         // Add Guardianship Fee (U18) for second accommodation - using cutoff date pricing rules

@@ -72,6 +72,9 @@ class AccommodationController extends Controller
             'dietary_supplement_fee' => 'nullable|numeric|min:0',
             'dietary_supplement_enabled_2026' => 'nullable|boolean',
             'dietary_supplement_fee_2026' => 'nullable|numeric|min:0',
+            'other_charge_enabled' => 'nullable|boolean',
+            'other_charge_name' => 'nullable|string|max:255',
+            'other_charge_amount' => 'nullable|numeric|min:0',
             'active' => 'nullable|boolean',
             'order' => 'nullable|integer|min:0',
         ]);
@@ -82,6 +85,7 @@ class AccommodationController extends Controller
         $validated['dietary_supplement_enabled'] = $request->has('dietary_supplement_enabled');
         $validated['private_bathroom_enabled_2026'] = $request->has('private_bathroom_enabled_2026');
         $validated['dietary_supplement_enabled_2026'] = $request->has('dietary_supplement_enabled_2026');
+        $validated['other_charge_enabled'] = $request->has('other_charge_enabled');
         
         // Set default order if not provided
         if (!$request->has('order')) {
@@ -149,6 +153,9 @@ class AccommodationController extends Controller
             'dietary_supplement_fee' => 'nullable|numeric|min:0',
             'dietary_supplement_fee_2026' => 'nullable|numeric|min:0',
             'dietary_supplement_enabled_2026' => 'nullable|boolean',
+            'other_charge_enabled' => 'nullable|boolean',
+            'other_charge_name' => 'nullable|string|max:255',
+            'other_charge_amount' => 'nullable|numeric|min:0',
             'active' => 'nullable|boolean',
             'order' => 'nullable|integer|min:0',
         ]);
@@ -159,6 +166,7 @@ class AccommodationController extends Controller
         $validated['dietary_supplement_enabled'] = $request->has('dietary_supplement_enabled');
         $validated['private_bathroom_enabled_2026'] = $request->has('private_bathroom_enabled_2026');
         $validated['dietary_supplement_enabled_2026'] = $request->has('dietary_supplement_enabled_2026');
+        $validated['other_charge_enabled'] = $request->has('other_charge_enabled');
         
         $accommodation->update($validated);
 
